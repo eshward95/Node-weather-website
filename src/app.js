@@ -5,6 +5,7 @@ const geocode=require('./utils/geocode')
 const forecast=require('./utils/forecast')
 
 const app=express();
+const port=process.env.PORT||5000;
 console.log(__dirname)
 console.log(path.join(__dirname,'../public'))
 
@@ -94,7 +95,7 @@ app.get('*',(req,res)=>{
         error:'Page not found'
     })
 })
-app.listen(5000,()=>{
+app.listen(port,()=>{
     console.log("Listening on 5000",)
    
 })
